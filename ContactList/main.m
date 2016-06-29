@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InputCollector.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+
+        InputCollector *prompter = [[InputCollector alloc] init];
+        
+        
+        NSString *usernameInput = [prompter inputForPrompt:@"Enter your username: "];
+        
+        NSLog(@"%@", usernameInput);
+        
     }
     return 0;
 }
