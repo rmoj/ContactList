@@ -7,6 +7,7 @@
 //
 
 #import "InputCollector.h"
+#import "Contact.h"
 
 
 @implementation InputCollector
@@ -32,17 +33,7 @@
     NSString *inputString = [NSString stringWithUTF8String:userInput];
     
     return [[inputString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]] mutableCopy];
-
     
 }
 
-/*
-char userPrompt[255];
-NSLog(@"\n%@", promptString);
-fgets(userPrompt, 255, stdin);
-NSString *inputString = [NSString stringWithUTF8String:userPrompt];
-
-return [inputString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];
-
-*/
 @end

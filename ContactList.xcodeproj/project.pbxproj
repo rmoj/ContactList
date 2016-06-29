@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A7084D511D2339B200BC9561 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7084D501D2339B200BC9561 /* main.m */; };
 		A7084D591D233A8D00BC9561 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = A7084D581D233A8D00BC9561 /* InputCollector.m */; };
+		A7084D5C1D23605300BC9561 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = A7084D5B1D23605300BC9561 /* Contact.m */; };
+		A7084D5F1D23654300BC9561 /* ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = A7084D5E1D23654300BC9561 /* ContactList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		A7084D501D2339B200BC9561 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7084D571D233A8D00BC9561 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
 		A7084D581D233A8D00BC9561 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
+		A7084D5A1D23605300BC9561 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		A7084D5B1D23605300BC9561 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		A7084D5D1D23654300BC9561 /* ContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactList.h; sourceTree = "<group>"; };
+		A7084D5E1D23654300BC9561 /* ContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 				A7084D501D2339B200BC9561 /* main.m */,
 				A7084D571D233A8D00BC9561 /* InputCollector.h */,
 				A7084D581D233A8D00BC9561 /* InputCollector.m */,
+				A7084D5A1D23605300BC9561 /* Contact.h */,
+				A7084D5B1D23605300BC9561 /* Contact.m */,
+				A7084D5D1D23654300BC9561 /* ContactList.h */,
+				A7084D5E1D23654300BC9561 /* ContactList.m */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -123,7 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7084D5F1D23654300BC9561 /* ContactList.m in Sources */,
 				A7084D591D233A8D00BC9561 /* InputCollector.m in Sources */,
+				A7084D5C1D23605300BC9561 /* Contact.m in Sources */,
 				A7084D511D2339B200BC9561 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

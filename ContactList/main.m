@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
+#import "Contact.h"
+#import "ContactList.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
         InputCollector *prompter = [[InputCollector alloc] init];
+        
+        ContactList *myContactList = [[ContactList alloc] init];
         
         NSMutableString *userInputMutable;
 
@@ -22,12 +26,24 @@ int main(int argc, const char * argv[]) {
             
             if ([userInputMutable isEqualToString:@"new"]) {
                 
-                NSLog(@"You chose new\n");
+                //NSLog(@"You chose new\n");
+                Contact *newContact = [[Contact alloc] init];
+                printf("\nEnter full name: ");
+                NSMutableString *fullnameInput = [prompter getUserInput];
+                newContact.fullName = fullnameInput;
+                
+                printf("\nEnter email address: ");
+                NSMutableString *emailInput = [prompter getUserInput];
+                newContact.fullName = emailInput;
+                
+                [myContactList addContact:newContact];
+                
             }
             
             if ([userInputMutable isEqualToString:@"list"]) {
                 
-                NSLog(@"You chose list\n");
+                //NSLog(@"You chose list\n");
+                
             }
             
             userInputMutable = [prompter getUserInput];
