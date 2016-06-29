@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
 
         while (!([userInputMutable isEqualToString:@"quit"])) {
             
-            [prompter displayMenu];
+            
             
             if ([userInputMutable isEqualToString:@"new"]) {
                 
@@ -34,7 +34,7 @@ int main(int argc, const char * argv[]) {
                 
                 printf("\nEnter email address: ");
                 NSMutableString *emailInput = [prompter getUserInput];
-                newContact.fullName = emailInput;
+                newContact.emailAddress = emailInput;
                 
                 [myContactList addContact:newContact];
                 
@@ -42,13 +42,24 @@ int main(int argc, const char * argv[]) {
             
             if ([userInputMutable isEqualToString:@"list"]) {
                 
-                //NSLog(@"You chose list\n");
+                NSLog(@"You chose list\n");
+                /*
+                NSEnumerator *enumerator = [myContactList objectEnumerator];
+                id object;
+                
+                while ((object = [enumerator nextObject])) {
+                    // do something with object...
+                }
+                 */
+                
+                ///NSLog(@"%@", [myContactList);
                 
             }
             
+            [prompter displayMenu];
             userInputMutable = [prompter getUserInput];
             
-            NSLog(@"%@", userInputMutable);
+            //NSLog(@"%@", userInputMutable);
             
         //NSString *usernameInput = [prompter inputForPrompt:@"Enter your username: "];
         
