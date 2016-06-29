@@ -14,11 +14,31 @@ int main(int argc, const char * argv[]) {
 
         InputCollector *prompter = [[InputCollector alloc] init];
         
+        NSMutableString *userInputMutable;
+
+        while (!([userInputMutable isEqualToString:@"quit"])) {
+            
+            [prompter displayMenu];
+            
+            if ([userInputMutable isEqualToString:@"new"]) {
+                
+                NSLog(@"You chose new\n");
+            }
+            
+            if ([userInputMutable isEqualToString:@"list"]) {
+                
+                NSLog(@"You chose list\n");
+            }
+            
+            userInputMutable = [prompter getUserInput];
+            
+            NSLog(@"%@", userInputMutable);
+            
+        //NSString *usernameInput = [prompter inputForPrompt:@"Enter your username: "];
         
-        NSString *usernameInput = [prompter inputForPrompt:@"Enter your username: "];
-        
-        NSLog(@"%@", usernameInput);
-        
+        //NSLog(@"\n%@\n", usernameInput);
+        }
+        printf("\nAu Revoir!\n\n");
     }
     return 0;
 }

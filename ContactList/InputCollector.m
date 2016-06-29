@@ -12,21 +12,37 @@
 @implementation InputCollector
 
 -(void) displayMenu {
-    NSLog(@"\nWhat would you like to do today?\n");
-    NSLog(@"new - Create a new contact\n");
-    NSLog(@"list - List all contacts\n");
-    NSLog(@"quit - Exit application\n");
+    printf("\nWhat would you like to do today?\n");
+    printf("new - Create a new contact\n");
+    printf("list - List all contacts\n");
+    printf("quit - Exit application\n");
+    printf("Enter choice: ");
 }
 
 
 -(NSString *)inputForPrompt:(NSString *)promptString {
-    
-    char userPrompt[255];
-    NSLog(@"\n%@", promptString);
-    fgets(userPrompt, 255, stdin);
-    NSString *inputString = [NSString stringWithUTF8String:userPrompt];
 
-    return [inputString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];
+    return [promptString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
+- (NSMutableString *)getUserInput {
+
+    char userInput[255];
+    fgets(userInput, 255, stdin);
+    NSString *inputString = [NSString stringWithUTF8String:userInput];
+    
+    return [[inputString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]] mutableCopy];
+
+    
+}
+
+/*
+char userPrompt[255];
+NSLog(@"\n%@", promptString);
+fgets(userPrompt, 255, stdin);
+NSString *inputString = [NSString stringWithUTF8String:userPrompt];
+
+return [inputString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];
+
+*/
 @end

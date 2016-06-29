@@ -13,6 +13,8 @@
 @interface InputCollector : NSObject
 
 -(void) displayMenu;
+-(NSMutableString *)getUserInput;
 -(NSString *)inputForPrompt:(NSString *)promptString;
+
 
 @end
